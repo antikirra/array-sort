@@ -6,11 +6,7 @@
   "autoload": {
     "psr-4": {
       "Antikirra\\ArraySort\\": ""
-    },
-    "files": [
-      "bootstrap.php",
-      "alias.php"
-    ]
+    }
   },
   "authors": [
     {
