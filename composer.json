@@ -6,11 +6,7 @@
   "autoload": {
     "psr-4": {
       "Antikirra\\ArraySort\\": ""
-    },
-    "files": [
-      "bootstrap.php",
-      "alias.php"
-    ]
+    }
   },
   "authors": [
     {
@@ -23,5 +19,8 @@
   },
   "config": {
     "sort-packages": true
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^12.0@dev"
   }
 }
