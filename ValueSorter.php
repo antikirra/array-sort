@@ -2,6 +2,8 @@
 
 namespace Antikirra\ArraySort;
 
+use InvalidArgumentException;
+
 final class ValueSorter extends AbstractSorter
 {
     /**
@@ -35,6 +37,10 @@ final class ValueSorter extends AbstractSorter
      */
     public function sort(&$array, $mode = SORT_REGULAR)
     {
+        if (!is_array($array)) {
+            throw new InvalidArgumentException();
+        }
+
         $mode = $this->normalizeMode($mode);
 
         if ($this->preserveKeys) {

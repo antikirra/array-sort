@@ -2,6 +2,8 @@
 
 namespace Antikirra\ArraySort;
 
+use InvalidArgumentException;
+
 final class FunctionSorter
 {
     /**
@@ -69,6 +71,10 @@ final class FunctionSorter
      */
     public function sort(&$array)
     {
+        if (!is_array($array)) {
+            throw new InvalidArgumentException();
+        }
+
         if ($this->byValue) {
             if ($this->preserveKeys) {
                 uasort($array, $this->callback);

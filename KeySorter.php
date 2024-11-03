@@ -2,6 +2,8 @@
 
 namespace Antikirra\ArraySort;
 
+use InvalidArgumentException;
+
 final class KeySorter extends AbstractSorter
 {
     /**
@@ -20,6 +22,10 @@ final class KeySorter extends AbstractSorter
      */
     public function sort(&$array, $mode = SORT_REGULAR)
     {
+        if (!is_array($array)) {
+            throw new InvalidArgumentException();
+        }
+
         $mode = $this->normalizeMode($mode);
 
         if ($this->order === SORT_ASC) {
