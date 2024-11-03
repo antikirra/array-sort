@@ -61,6 +61,8 @@ on the array as expected.
 ```php
 <?php
 
+use Antikirra\ArraySort\Sorter;
+
 require __DIR__ . '/vendor/autoload.php';
 
 $array = ['b' => 3, 'a' => 8, 'd' => 11, 'c' => 5];
